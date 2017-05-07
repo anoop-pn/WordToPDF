@@ -47,7 +47,6 @@ public class pdfconverter1 extends HttpServlet {
 		String pdfFilePath = outputFile;
 		try
 		{
-			int i;
 		FileOutputStream fileOutputStream = new FileOutputStream(pdfFilePath);
 		PdfWriter writer = null;
 		writer = PdfWriter.getInstance(pdfDocument, fileOutputStream);
