@@ -14,13 +14,18 @@ import com.lowagie.text.Document;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
 
-/**  
+/**
+@ Author: Anoop P N
+
+
+***/
+/**
  * Servlet implementation class pdfconverter1
  */
 @WebServlet("/pdfconverter1")
 public class pdfconverter1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -51,7 +56,7 @@ public class pdfconverter1 extends HttpServlet {
 
 		File file1 = new File(inputFile);
 		pdfDocument.add(new Paragraph(org.apache.commons.io.FileUtils.readFileToString(file1)));
-		
+
 		 out.println("<center><h1>succesfully created pdf file</center><h1>");
 		 Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " +outputFile);
 		pdfDocument.close();
@@ -62,7 +67,7 @@ public class pdfconverter1 extends HttpServlet {
 		out.println("Document Exception!" + exception);
 		}
 		}
-	
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
